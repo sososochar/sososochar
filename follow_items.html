@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Follow_items</title>
+    </head>
+    <body>
+        <form action = "http://localhost:5000/follow_items" method = "post">
+            <div class = 'my_page_header'>
+                <a class = "home_button" href = "/">로고 넣어야징~</a>
+                <a class = "search" href = "/">검색 이미지</a>
+                <p>원하는 키워드 검색<input type = "text" name = "search_key"></p>  
+            </div>
+                <table border = "1">
+                    <tr>
+                        <th>상품</th>
+                        <th>판매자</th>
+                    </tr>
+                    {% for items in db.follow_items() %}
+                        <tr> 
+                            <td>{{items.items}}</td>
+                            <td>{{items.seller}}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>My_items</title>
+    </head>
+    <body>
+        <form action = "{{http://localhost:5000/my_items}}" method = "post">
+            <div class = 'my_page_header'>
+                <a class = "home_button" href = "/">로고 넣어야징~</a>  
+                <h1>마이 페이지</h1>
+            </div>
+                {% for items in db.my_items() %}
+                    <img src = "{{url_for('static'), filename = ''}}">
+                    <p>{{items.name}}</p>
+                    {% for item in items.name() %}
+                    <p>{{item.key}}</p>
+                    {% endfor %}
+                    <div class = "sold_out">
+                        <input type = "button" class = "my_items_button" value = "판매완료" onclick = "">
+                        <input type = "button" class = "my_items_button" value = "수정하기" onclick = "location.href='/items_modify'">
+                    </div> 
+                {% endfor %}
+            </div>
+        </form>
+    </body>
+</html>

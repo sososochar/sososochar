@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Follow_list</title>
+    </head>
+    <body>
+        <form action = "{{http://localhost:5000/follow_list}}" method = "post">
+            <div class = 'my_page_header'>
+                <a class = "home_button" href = "/">로고 넣어야징~</a>  
+                <h1>팔로우 목록</h1>
+            </div>
+                    <table>
+                        <tr>
+                            <th>팔로우_ID</th>
+                            <th>상품 보러가기</th>
+                        </tr>
+                        {% for name in db.follow_list() %}
+                        <tr>
+                            <td>{{name.name}}</td>
+                            <td><input type = "submit" value = "보러가기"></td>
+                        </tr>
+                        {% endfor %}
+            </div>
+        </form>
+    </body>
+</html>

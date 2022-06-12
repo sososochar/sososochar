@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Items</title>
+    </head>
+    <body>
+        <form action = "http://127.0.0.1:5000/items" method = ["GET", "post"]>
+            <div class = 'my_page_header'>
+                <a class = "home_button" href = "/">로고 넣어야징~</a>
+                <a class = "search" href = "/">검색 이미지</a>
+                <p><input type = "text" name = "search_key"></p> 
+                <a href = '/sign_up'>회원가입</a> 
+            </div>
+                <table border = "1">
+                    <tr>
+                        <th>상품</th>
+                        <th>판매자</th>
+                        <th>#키워드</th>
+                    </tr>
+                    {% for item_ in items_list %}
+                        <tr> 
+                            <td>{{ item_.s_name }}</td>
+                            <td>{{ item_.s_seller }}</td>
+                            <td>{{ item_.s_key }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </form>
+    </body>
+</html>

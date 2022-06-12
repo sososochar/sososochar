@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Edit_item</title>
+    </head>
+    <body>
+        <form action = "{{url_for('modify', item = m_item)}}" method = "post">
+            <div class = 'Log_in_header'>
+                <a class = "home_button" href = "/">로고 넣어야징~</a>  
+                <h1>판매</h1>
+            </div>
+                <img src = "{{url_for('static'), filename = ''}}">
+                <p>상품명<input type = "text" name = "nm" value = {{item.nm}}></p>
+                <p>key<input type = "text" name = "key" value = {{item.key}}></p>
+                <a class = "modify_item" href = "/my_items">수정하기</a>
+
+            </div>
+        </form>
+    </body>
+</html>

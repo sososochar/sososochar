@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>follow_page</title>
+    </head>
+    <body>
+        <form action = "http://localhost:5000/follow_page" method = "post">
+            <div class = 'my_page_header'>
+                <a class = "home_button" href = "/">로고 넣어야징~</a>  
+                <h1>{{follow_user}}님의 페이지</h1>
+            </div>
+            {% for items in db.follow_items() %}
+                <img src = "{{url_for('static'), filename = ''}}">
+                <p>{{items.name}}</p>
+                {% for item in items.name() %}
+                <p>{{items.key}}</p>
+                {% endfor %}
+                <div class = "buy">
+                    <input type = "button" class = "follow_items_button" value = "구매하기" onclick = "">
+                </div> 
+            {% endfor %}
+        </div>
+        </form>
+    </body>
+</html>
